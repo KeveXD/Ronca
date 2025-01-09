@@ -1,21 +1,24 @@
 // Az Express csomag importálása
 const express = require('express');
 const path = require('path');
+const helmet = require('helmet'); // Biztonsági fejlesztések
 
 // Az Express alkalmazás létrehozása
 const app = express();
 
-// Port, amin a szerver futni fog
-const PORT = 3000;
+// Biztonsági fejlesztések használata
+app.use(helmet());
 
-// Statikus fájlok kiszolgálása (pl. CSS, JS, képek), ha azok a projekt gyökérkönyvtárában vannak
-app.use(express.static(path.join(__dirname)));
+// Port, amin a szerver futni fog (Heroku környezetre optimalizált)
+const PORT = process.env.PORT || 3000;
+
+// Statikus fájlok kiszolgálása
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Alapértelmezett útvonal, amely a home.html fájlt szolgáltatja
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home.html')); // Mivel nem a public mappában van
+  res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
-
 
 // A szerver indítása a megadott porton
 app.listen(PORT, () => {
