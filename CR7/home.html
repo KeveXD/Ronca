@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo Goals</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #a9a7a4; /* Világosbarna háttér */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background: #fff; /* Fehér háttér a kártyán */
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;  /* Increased width for better visibility */
+            max-width: 700px;  /* Increased max-width for larger screens */
+            z-index: 2;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .goals {
+            font-size: 4rem;
+            color: #ff4757;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .ad-placeholder {
+            background-color: #7a7a7a;
+            border: 2px dashed #aaa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #888;
+            display: block;
+        }
+        /* Flexbox alapú hirdetési helyek */
+        .ads-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 100%;
+            z-index: 0; /* A hirdetési helyek a háttérben legyenek */
+        }
+        .ad-card {
+            background-color: #787474;
+            border: 2px dashed #aaa;
+            border-radius: 10px;
+            width: 45%;
+            height: 100px;
+            font-size: 1rem;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hirdetések elrendezése mobilra */
+        @media (max-width: 767px) {
+            .ads-wrapper {
+                flex-direction: column;
+                justify-content: center;
+            }
+            .ad-card {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cristiano Ronaldo Goals</h1>
+        <div class="goals" id="goal-count">917</div>
+        <p>Professional career goals scored by Cristiano Ronaldo.</p>
+    </div>
+
+    <!-- Hirdetések elhelyezése -->
+    <div class="ads-wrapper">
+        <div class="ad-card">
+            Hirdetés helye (balra)
+        </div>
+        <div class="ad-card">
+            Hirdetés helye (jobbra)
+        </div>
+    </div>
+
+    <script>
+        // A jövőbeli hirdetések dinamikus betöltésére szolgáló kód itt kerülhet
+    </script>
+</body>
+</html>
